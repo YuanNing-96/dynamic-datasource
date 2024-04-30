@@ -102,4 +102,6 @@ public class DataSourceProperty {
      * 解密公匙(如果未设置默认使用全局的)
      */
     private String publicKey;
+
+    private Boolean enable = true;
 }

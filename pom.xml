@@ -2,7 +2,7 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.baomidou</groupId>
+    <groupId>top.yuanning</groupId>
     <artifactId>dynamic-datasource</artifactId>
     <version>4.3.0</version>
     <packaging>pom</packaging>
@@ -81,17 +81,17 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.baomidou</groupId>
+                <groupId>top.yuanning</groupId>
                 <artifactId>dynamic-datasource-creator</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.baomidou</groupId>
+                <groupId>top.yuanning</groupId>
                 <artifactId>dynamic-datasource-spring</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.baomidou</groupId>
+                <groupId>top.yuanning</groupId>
                 <artifactId>dynamic-datasource-spring-boot-common</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -467,6 +467,19 @@
                     </plugins>
                 </pluginManagement>
             </build>
+        </profile>
+        <profile>
+            <id>custom-release</id>
+            <distributionManagement>
+                <repository>
+                    <id>nexus-hosted-release</id>
+                    <url>https://nexus3.675599.xyz/repository/maven-hosted-release/</url>
+                </repository>
+                <snapshotRepository>
+                    <id>nexus-hosted-snapshot</id>
+                    <url>https://nexus3.675599.xyz/repository/maven-hosted-snapshot/</url>
+                </snapshotRepository>
+            </distributionManagement>
         </profile>
     </profiles>
 

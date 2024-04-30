@@ -119,4 +119,20 @@ public class DynamicDataSourceProperties {
      */
     @NestedConfigurationProperty
     private DynamicDatasourceAopProperties aop = new DynamicDatasourceAopProperties();
+
+    public void setDatasource(Map<String, DataSourceProperty> datasource){
+        if(datasource != null){
+
+            for (Map.Entry<String, DataSourceProperty> entry : datasource.entrySet()) {
+
+                DataSourceProperty property = entry.getValue();
+
+                if (!property.getEnable()) {
+                    datasource.remove(entry.getKey());
+                }
+            }
+        }
+
+        this.datasource = datasource;
+    }
 }

@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.baomidou</groupId>
+        <groupId>top.yuanning</groupId>
         <artifactId>dynamic-datasource</artifactId>
         <version>4.3.0</version>
     </parent>
@@ -16,7 +16,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.baomidou</groupId>
+            <groupId>top.yuanning</groupId>
             <artifactId>dynamic-datasource-spring</artifactId>
         </dependency>
 
